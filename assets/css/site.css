@@ -105,8 +105,12 @@ button, input, textarea, select { font: inherit; }
   font-size: .92rem;
   text-decoration: none;
 }
-.site-nav a:hover,
-.site-nav a[aria-current="page"] { background: rgba(216, 97, 40, .14); }
+.site-nav a:hover { background: rgba(216, 97, 40, .14); }
+.site-nav a[aria-current="page"] {
+  color: white;
+  background: var(--persimmon-dark);
+  box-shadow: 0 6px 18px rgba(92, 43, 20, .2);
+}
 .nav-cta { border: 1px solid currentColor; }
 .menu-button {
   display: none;
@@ -381,6 +385,14 @@ button, input, textarea, select { font: inherit; }
 .info-card h3 { margin: 0 0 12px; font-family: var(--serif); font-size: 1.4rem; }
 .info-card p { margin: 0; color: var(--muted); }
 .info-card .number { display: block; margin-bottom: 28px; color: var(--persimmon); font-size: .72rem; font-weight: 800; letter-spacing: .14em; }
+.section-dark .info-card {
+  color: var(--ink);
+  background: var(--cream);
+  border-color: rgba(255,255,255,.18);
+  box-shadow: 0 18px 48px rgba(0,0,0,.2);
+}
+.section-dark .info-card p { color: #5f554b; }
+.section-dark .info-card .number { color: var(--persimmon-dark); }
 
 .comparison { width: 100%; border-collapse: collapse; border-top: 1px solid var(--line); }
 .comparison th,
@@ -528,3 +540,4 @@ button, input, textarea, select { font: inherit; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
